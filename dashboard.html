@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="demoApp">
+<head>
+<meta charset=utf-8 />
+<meta name="viewport" content="width=620" />
+<title>Admin Dashboard</title>
+<link rel="shortcut icon" href="img/favicon.png">
+<link rel="stylesheet" href="css/admin.css" />
+<link rel="stylesheet" href="css/stylefront.css" />
+<script type="text/javascript" src="js/jquery-1.10.1.js"></script>
+<script type="text/javascript" src="js/dropdown-menu.min.js"></script>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/myapp.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">
+if(localStorage.getItem("login") != 'true') {
+window.location.href = 'index.html';
+}
+  google.load("visualization", "1", {packages:["corechart"]});
+  google.setOnLoadCallback(drawChart);
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+      ['Year', 'Sales'],
+      ['30',  100],
+      ['29',  50],
+      ['27',  300],
+      ['26',  400],
+      ['25',  1000],
+      ['24',  566],
+      ['23',  700],
+      ['22',  777]
+      
+    ]);
+
+    var options = {
+        title: 'Sales made during last 30 days',
+        curveType: 'function',
+        legend: { position: 'bottom' }
+    };
+
+    var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+    chart.draw(data, options);
+  }
+</script>
+<script type="text/javascript">
+  google.load("visualization", "1", {packages:["corechart"]});
+  google.setOnLoadCallback(drawPie);
+  function drawPie() {
+    var data = google.visualization.arrayToDataTable([
+      ['Task', 'Hours per Day'],
+      ['Electronics', 11],
+      ['Clothings', 2],
+      ['Computers',2],
+      ['Books', 2],
+      ['Other Accessories',7]
+    ]);
+
+    var options = {
+      title: 'My Daily Activities',
+      is3D: true,
+    };
+
+    var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+    chart.draw(data, options);
+  }
+</script>
+ <script type="text/javascript">
+  google.load("visualization", "1", {packages:["corechart"]});
+  google.setOnLoadCallback(drawChart3);
+  function drawChart3() {
+    var data = google.visualization.arrayToDataTable([
+      ['Year', 'Sales', 'Expenses'],
+      ['2012',  1000,      400],
+      ['2013',  1170,      460],
+      ['2014',  660,       1120],
+      ['2015',  1030,      540]
+    ]);
+
+    var options = {
+      title: 'Yearly sales Analysis',
+      hAxis: {title: 'Year', titleTextStyle: {color: 'red'}}
+    };
+    var chart = new google.visualization.ColumnChart(document.getElementById('chart_div_year'));
+    chart.draw(data, options);
+  }
+</script>
+</head>
+<body ng-app="">
+<div ng-include="'includes/header.html'"></div>
+<div class="breadcrumb"><a href="dashboard.html">Home</a> &gt; Dashboard</div>
+<div id="container" style="margin:0 3%;">
+<div id='p'>
+<div style="padding:5px;">
+<div class="div_rpt">Report Analysys</div>
+</div>
+<div class="cdiv">
+    <div style="border: 1px solid #E9E9E9;border-radius:2px;background:#F4F4F4;" id="order_price">
+        <div style="border-bottom: 2px solid #CECECE;padding:3px;" >
+            <div style="padding:3px;font-weight:bold">
+                Total sales
+            </div>
+            <div style="padding:3px;color:#00A400">
+                $1,150.00
+            </div>
+        </div>
+         <div  style="border-bottom: 2px solid #CECECE;padding:3px;">
+            <div style="padding:3px;font-weight:bold">
+                Today's sales
+            </div>
+            <div style="padding:3px;color:#00A400">
+                $230.00
+            </div>
+        </div>
+         <div  style="padding:3px;">
+            <div style="padding:3px;font-weight:bold">
+                Total Orders
+            </div>
+            <div style="padding:3px;color:#00A400">
+                22
+            </div>
+        </div>
+    </div>
+    <div style="clear:both"></div>
+    <div style="clear:both"></div>
+    <div class="chart_div1" id="piechart_3d"></div>
+</div>
+<div class="chart2">
+<div>
+    <div style="border:1px solid #F0F0F0;border-radius:2px 2px 0 0;">
+        <div class="div_dly_sales">Daily Sales Analysis</div>
+         <div id="chart_div" class="chart_div"></div>
+    </div>
+</div>
+<div style="clear:both"></div>
+<br />
+<div>
+    <div style="border:1px solid #F0F0F0;border-radius:2px 2px 0 0;">
+         <div class="div_expnce">Yearly Sales and Expences Analysis</div>
+        <div id="chart_div_year" class="chart_div"></div>
+    </div>
+</div>
+</div>
+</div>
+<div class="cb">&nbsp;</div>
+</div>
+<div class="cb">&nbsp;</div>
+<div class="cb">&nbsp;</div><div class="cb">&nbsp;</div><div class="cb">&nbsp;</div><div class="cb">&nbsp;</div>
+<div ng-include="'includes/footer.html'"></div>
+</body>
+</html>

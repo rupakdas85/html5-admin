@@ -1,0 +1,63 @@
+<script>
+if(localStorage.getItem("login") === 'true') {
+	$("#welcome_user").html('Welcome '+localStorage.getItem("user_name"));
+	$("#user_dp").html('<img src="img/user_img.png" align="" height="70"  alt="Logo" style="border-radius:20%" />');
+	$("#menu").css('display','block');
+}else{
+	$(".top-txt1").html('')
+	$("#user_dp").html('')
+	$("#menu").css('display','none');
+}
+function logout(){
+	localStorage.removeItem('login');
+	window.location.href = 'index.html';
+}
+</script>
+<div id="header">
+  <div style="width:100%;padding:5px 0 5px 5px;">
+    <div class="fl" style="width:95%;">
+        <div class="fl">
+            <img src="img/ecommerce-logo.png" align="" height="70"  alt="Logo" />
+        </div>
+          <div class="fl" style="width:67%">&nbsp;</div>
+        <div  class="fl" id="user_dp"></div>
+    </div>
+    <div class="cb">&nbsp;</div>
+    <div style="text-align:right;width:95%;" id="if_loggedin">
+   		 <span class="top-txt1" id="welcome_user">&nbsp;</span>
+         <span class="top-txt1"><a href='#' onclick='logout()'>Logout</a></span>
+    </div>
+   	 <div id="menu" style="display:none;">
+     <div id="pagewrap">
+        <div id="mainmenu">	
+        <ul><li id="id10"><a href="dashboard.html" class="hide"><span>Home</span></a><!--[if lte IE 7]>
+            <![endif]--></li><li id="id20"><a href="javascript:void(0)" class="hide"><span>Categories</span></a><!--[if lte IE 7]>
+            <![endif]--><div class="dropdown"><ul><li id="210"><a href="cat_manage.html">Manage Category</a></li><li id="230"><a href="javascript:void(0);" id="add_catgry">Add Category</a></li></ul></div><!--[if lte IE 7]>
+            <![endif]--></li><li id="id30"><a href="javascript:void(0)" class="hide"><span>Brands</span></a><!--[if lte IE 7]>
+            <![endif]--><div class="dropdown"><ul><li id="320"><a href="brand_manage.html">Manage Brands</a></li><li id="310"><a href="add_brand.html">Add Brands</a></li><li id="320"><a href="javascript:void(0)">Expoort Brands</a></li></ul></div><!--[if lte IE 7]>
+            <![endif]--></li><li id="id40"><a href="javascript:void(0);" class="hide"><span>Products</span></a><!--[if lte IE 7]>
+            <![endif]--><div class="dropdown"><ul><li id="410"><a href="manage_product.html">Manage products</a></li><li id="420"><a href="add_product.html">Add Products</a></li><li id="450"><a href="javascript:void(0)">Export Product(csv/xls)</a></li></ul></div><!--[if lte IE 7]>
+            <![endif]--></li><li id="id50"><a href="javascript:void(0);" class="hide"><span>User</span></a><!--[if lte IE 7]>
+             <![endif]--><div class="dropdown"><ul><li id="410"><a href="user.html">Manage User</a></li><li id="420"><a href="add_user.html">Add User</a></li></ul></div><!--[if lte IE 7]>
+             <![endif]--></li>
+             <li id="id60"><a href="javascript:void(0);" class="hide"><span>Offer Settings</span></a><!--[if lte IE 7]>
+            <![endif]--><div class="dropdown"><ul><li id="540"><a href="offer.html">Offers and discounts</a></li><li id="540"><a href="add_offer.html">Add new Offer</a></li><li id="510"><a href="javascript:void(0);">Shipping & sales tax</a></li></ul></div><!--[if lte IE 7]>
+            <![endif]--></li>
+             <li id="id70"><a href="javascript:void(0);" class="hide"><span>Order</span></a><!--[if lte IE 7]>
+            <![endif]--><div class="dropdown"><ul><li id="510"><a href="javascript:void(0);">New Order</a></li><li id="540"><a href="javascript:void(0)">Processed Order</a></li></ul></div><!--[if lte IE 7]>
+            <![endif]--></li><li id="id80"><a href="javascript:void(0);" class="hide"><span>Notifications</span></a><!--[if lte IE 7]>
+            <![endif]--><div class="dropdown"><ul><li id="510"><a href="javascript:void(0);">Email setting</a></li><li id="540"><a href="javascript:void(0)">Message setting</a></li></ul></div><!--[if lte IE 7]>
+            <![endif]--></li>
+            
+            <li id="id90"><a href="javascript:void(0);" class="hide"><span>Help</span></a><!--[if lte IE 7]>
+            <![endif]--><div class="dropdown"><ul><li id="710"><a href="javascript:void(0);">FAQ</a></li><li id="720"><a href="javascript:void(0);">Contact Us</a></li><li id="730"><a href="javascript:void(0);">About My Admin</a></li><li id="740"><a href="javascript:void(0);">Support Request</a></li></ul></div><!--[if lte IE 7]>
+            
+            <![endif]--></li></ul>    
+    </div>
+    </div>
+    </div>
+  </div>
+<div style="background-color:#73d4f7; height:3px;">&nbsp;</div>
+</div>
+ 
+ 	

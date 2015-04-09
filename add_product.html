@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="demoApp">
+<head>
+<meta charset=utf-8 />
+<meta name="viewport" content="width=620" />
+<title>Add New Product</title>
+<link rel="shortcut icon" href="img/favicon.png">
+<link rel="stylesheet" href="css/admin.css" />
+<link rel="stylesheet" href="css/jquery-ui-1.8.4.custom.css"/>
+<link href="css/stylefront.css" rel="stylesheet" type="text/css">
+<link  rel="stylesheet" type="text/css" href="css/uploadfile.css" />
+<style type="text/css">
+ .venue_txt_bx_bg{border:1px solid #149BCE;border-radius:5px 5px 5px 5px;font-size:14px;height:15px;outline:medium none;width:46%;}
+.venue_bx_bg{background:#fff;border:1px solid #3FA9CD;border-radius:5px 5px 5px 5px;font-size:13px;height:22px;outline:medium none;padding:5px 5px 5px 8px;width:46%;}
+.share_txt_width {
+  height: 30px;
+  padding-left: 5px;
+  width: 40%;
+}
+</style>
+<script type="text/javascript" src="js/jquery-1.10.1.js"></script>
+<script type="text/javascript" src="js/dropdown-menu.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.js"></script>
+<script type="text/javascript" src="js/jquery.uploadfile.min.js"></script>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/myapp.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/add_product.js"></script>
+</head>
+<body ng-app="">
+<div ng-include="'includes/header.html'"></div>
+<div style="margin:5px;padding:5px;text-align:left;width:30%;"><a href="dashboard.html">Home</a> &gt; Add New Product</div>
+ <div class="cb">&nbsp;</div>
+<div id="container" style="margin:0 6%">
+    <div id="tabs">
+        <ul>
+            <li><a href="#tabs-1">Basic Info</a></li>
+            <li><a href="#tabs-2">Price</a></li>
+            <li><a href="#tabs-3">Additional Info</a></li>
+            <li><a href="#tabs-4">Seo Tags</a></li>
+        </ul>
+        <div id="tabs-1">
+        <div style="padding:3px;margin-top:5px;">
+        <table width="75%"   border="0" align="center" cellpadding="3" cellspacing="3">
+            <tr>
+                <td width="15%" align="left">Product Name<font color="red">*</font> </td>
+                <td width="85%" align="left">
+                    <div>
+                        <input type="text" name="brand_name" id="brand_name" class="venue_txt_bx_bg share_txt_width" placeholder="Brand Name" />
+                    </div>
+                    <div style="display:none;color:red" id="err_bname"></div>
+                </td>
+            </tr>
+            <tr align="left">
+                <td valign="top" width="15%">Image </td>
+                <td width="85%">
+                    <div style="width:70%;float:left;">
+                        <input type="hidden" name="totfiles" id="totfiles" readonly value="0">
+                        <input type="hidden" name="pageurl" id="pageurl" value="" size="0" />
+                        <div id="img_product">Upload</div>
+                        <div id="status"></div>
+                        <div id="ids"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr align="left">
+                <td valign="middle" width="15%">Product Description </td>
+                <td width="85%">
+                    <textarea name="prod_desc" id="prod_desc" label="false" class="venue_txt_bx_bg share_txt_width" style="margin: 0px; width: 50%; height: 71px;"></textarea>
+                </td>
+            </tr> 
+        </table>
+        </div>
+        </div>
+        <div id="tabs-2">
+        <div style="padding:3px;margin-top:5px;">
+        <table width="75%" height="304"  border="0" align="center" cellpadding="3" cellspacing="3">
+        <tr>
+            <td width="15%" align="left">Price<font color="red">*</font> </td>
+            <td width="85%" align="left">
+                <div>
+                <input type="text" name="Price" id="Price" class="venue_txt_bx_bg share_txt_width" placeholder="Price" />
+                </div>
+            	<div style="display:none;color:red" id="err_bname"></div>
+            </td>
+        </tr>
+        <tr align="left">
+            <td valign="middle">Sale Price</td>
+            <td>
+                <input type="text" name="Sale_Price" id="Sale_Price" class="venue_txt_bx_bg share_txt_width" placeholder="Sale Price" />
+            </td>
+        </tr>
+        <tr align="left">
+            <td valign="middle">Offer Price </td>
+            <td>
+                <input type="text" name="Offer_Price" id="Offer_Price" class="venue_txt_bx_bg share_txt_width" placeholder="Offer Price" />
+            </td>
+        </tr> 
+        </table>
+        </div>
+        </div>
+        <div id="tabs-3">
+        <fieldset style="border-radius: 4px 4px 0 0;">
+            <legend style="color:#0098E1;font-weight:bold">Product Type:</legend>
+            <div style="text-align:left;padding:3px">
+                Apparel: <input name="p_type" type="radio" checked="checked">
+                Electronics: <input name="p_type" type="radio">
+                Mobile: <input name="p_type" type="radio">
+                Books: <input name="p_type" type="radio">
+                Watch: <input name="p_type" type="radio">
+                Camera: <input name="p_type" type="radio">
+                Footwear: <input name="p_type" type="radio">
+                Laptops: <input name="p_type" type="radio">
+                Computer: <input name="p_type" type="radio">
+                Home & Kitchen: <input name="p_type" type="radio">
+            </div>
+        </fieldset>
+        <div style="padding:3px;margin-top:5px;">
+        <table width="100%" border="0" cellspacing="4" cellpadding="4">
+            <tr>
+                <td width="8%" align="left">Item Type :</td>
+                <td width="30%" align="left">
+                <select name="ItemType" id="ItemType" class="venue_txt_bx_bg share_txt_width">
+                    <option value="0">--Select--</option>
+                    <option value="1">New</option>
+                    <option value="2">Used</option>
+                </select>
+                <div style="display:none;color:#F00;text-align:center" id="err_subcatname"></div>
+                </td>
+                <td width="6%">&nbsp;</td>
+                <td width="6%">Quantity :</td>
+                <td width="50%"  align="left">
+                    <input type="text" name="Quantity" id="Quantity" class="venue_txt_bx_bg share_txt_width" placeholder="Quantity" maxlength="6" size="6" />
+                </td>
+            </tr>
+            <tr>
+                <td align="left">Weight Unit :</td>
+                <td  align="left">
+                    <select name="WeightUnit" id="WeightUnit" class="venue_txt_bx_bg share_txt_width">
+                        <option value="0">--Select--</option>
+                        <option value="1">Inch</option>
+                        <option value="2">CM</option>
+                    </select>
+                 	<div style="display:none;color:#F00;text-align:center" id="err_WeightUnit"></div>
+                </td>
+                <td>&nbsp;</td>
+                <td>Size :</td>
+                <td align="left">
+                    <select name="Size" id="Size" class="venue_txt_bx_bg share_txt_width">
+                        <option value="0">--Select--</option>
+                        <option value="S">Short</option>
+                        <option value="M">Medium</option>
+                        <option value="L">Large</option>
+                        <option value="XL">Extra Large</option>
+                    </select>
+                </td>
+            </tr>
+        <tr>
+            <td>Length :</td>
+            <td  align="left">
+                <input type="text" name="Length" id="Length" class="venue_txt_bx_bg share_txt_width" placeholder="Length" maxlength="6" size="6" />
+            </td>
+            <td>&nbsp;</td>
+            <td>Color :</td>
+            <td align="left">
+                <select name="Color" id="Color" class="venue_txt_bx_bg share_txt_width">
+                    <option value="0">--Select--</option>
+                    <option value="Red">Red</option>
+                    <option value="Green">Green</option>
+                    <option value="Blue">Blue</option>
+                    <option value="Yellow">Yellow</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+        <td>Height :</td>
+        <td  align="left">
+            <input type="text" name="Height" id="Height" class="venue_txt_bx_bg share_txt_width" placeholder="Height" maxlength="6" size="6" />
+        </td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        </tr>
+        </table>
+        </div>
+        </div>
+        <div id="tabs-4">
+       	 <div style="padding:3px;margin-top:5px;">
+            <table width="75%" height="304"  border="0" align="center" cellpadding="3" cellspacing="3" id="Table5"> 
+                <tr>
+                    <td width="15%" align="left">Product Title<font color="red">*</font> </td>
+                    <td width="85%" align="left">
+                    <div>
+                    <textarea name="ProductTitle" id="ProductTitle" label="false" class="venue_txt_bx_bg share_txt_width" style="margin: 0px; width: 70%; height: 71px;"></textarea>
+                    </div>
+                    <div style="display:none;color:red" id="err_bname"></div>
+                    </td>
+                </tr>
+                <tr align="left">
+                    <td valign="middle">Product meta tags </td>
+                    <td>
+                    <textarea name="meta_tag" id="meta_tag" label="false" class="venue_txt_bx_bg share_txt_width" style="margin: 0px; width: 70%; height: 71px;"></textarea>
+                    </td>
+                    </tr>
+                    <tr align="left">
+                    <td valign="middle">Product keywords </td>
+                    <td>
+                    <textarea name="keywords" id="keywords" label="false" class="venue_txt_bx_bg share_txt_width" style="margin: 0px; width: 70%; height: 71px;"></textarea>
+                    </td>
+                </tr> 
+            </table>
+        </div>
+        </div>
+</div>
+<div class="cb">&nbsp;</div>
+<div style="width:90%; text-align:right;">
+	<input type="button" value="Submit" class="rc-button rc-button-submit allbuttonlink" name="save_brand" id="save_brand">
+    <input type="button" value="Cancel" class="rc-button rc-button-submit allbuttonlink" name="cancel" id="cancel" onClick="JavaScript: history.go(-1);" style="cursor:hand" >
+</div>
+</div>
+<div ng-include="'includes/footer.html'"></div>
+</body>
+</html>

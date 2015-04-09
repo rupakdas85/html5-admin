@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="demoApp">
+<head>
+<meta charset=utf-8 />
+<meta name="viewport" content="width=620" />
+<title>Add Offer</title>
+<link rel="shortcut icon" href="img/favicon.png">
+<link rel="stylesheet" href="css/admin.css" />
+<link href="css/stylefront.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="js/jquery-1.10.1.js"></script>
+<script type="text/javascript" src="js/dropdown-menu.min.js"></script>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/myapp.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/add_offer.js"></script>
+</head>
+<body ng-app="">
+<div ng-include="'includes/header.html'"></div>
+<div style="margin:5px;padding:5px;text-align:left;width:30%;"><a href="dashboard.html">Home</a> &gt; New Offer</div>
+ <div class="cb">&nbsp;</div>
+<form name="add_brand_form" id="add_brand_form" method="post">
+<div style="border: solid 1px #286382; width:50%;margin:auto; padding:10px;">
+	<div class="error" style="text-align:right;"><font color="red">*</font> denotes mandatory fields.</div>
+    <div class="cb">&nbsp;</div>
+	<div style="background-color:#F4F4F4; float:left; width:100%">
+        <div style="float:left; width:20%;">Offer Name<font color="red">*</font></div>
+            <div style="float:left;width:40%; text-align:left;"> 
+                <input type="text" name="offer_name" id="offer_name" class="venue_txt_bx_bg share_txt_width" placeholder="Offer Name" required />
+                <div style="display:none;color:red" id="err_oname"></div>
+            </div>
+        </div>
+         <div class="cb">&nbsp;</div>
+    <div style="background-color:#F4F4F4; float:left; width:100%">
+    	<div style="float:left; width:20%;">Offer Type<font color="red">*</font></div>
+        <div style="float:left;width:70%;text-align:left;"><select name="offer_type" id="offer_type" class="venue_txt_bx_bg share_txt_width" style="width:30%"><option value="0">--Select--</option><option value="Festval offer">Festval offer</option><option value="Session offer">Session offer</option><option value="Winter offer">Winter offer</option><option value="New year sales">New year sales</option><option value="Valentine day sale">Valentine day sale</option><option value="other">other</option></select> </div><br>
+         <div style="display:none;color:red; width:55%" id="err_otype"></div>
+    </div>
+     <div class="cb">&nbsp;</div>
+     <div style="background-color:#F4F4F4;width:100%;">
+        <div style="width:100%">
+           <span class="bold-text">Start date<font color="red">*</font></span>
+            <span> 
+                <input type="date" name="start_date" id="start_date" class="venue_txt_bx_bg share_txt_width" style=" width:20%"/>
+                
+            </span>
+             <span class="bold-text"> End date<font color="red">*</font></span>
+            <span> 
+                <input type="date" name="end_date" id="end_date" class="venue_txt_bx_bg share_txt_width" style=" width:20%"/>
+            </span>
+        </div>
+         <div style="width:94%" class="fl">
+          <span class="fl" style="display:none;color:red; width:49%; text-align:right;" id="err_sd"></span>
+          <span class="fl" style="display:none;color:red; width:50%;" id="err_ed"></span>
+         </div>
+        </div>
+      <div class="cb">&nbsp;</div>
+      	<div style="background-color:#F4F4F4; float:left; width:100%">
+    	<div style="float:left; width:20%;">Discount By<font color="red">*</font></div>
+        <div style="float:left;width:70%;text-align:left;"><select name="dis_type" id="dis_type" class="venue_txt_bx_bg share_txt_width" style="width:30%"><option value="0">--Select--</option><option value="%">%</option><option value="Rs">Rs</option></select> </div><br>
+         <div style="display:none;color:red; width:57%" id="err_dtype"></div>
+    </div>
+      <div class="cb">&nbsp;</div>
+      <div style="background-color:#F4F4F4; float:left; width:100%">
+        <div style="float:left; width:20%;">Amount<font color="red">*</font></div>
+            <div style="float:left;width:40%; text-align:left;"> 
+                <input type="text" name="dis_amount" id="dis_amount" class="venue_txt_bx_bg share_txt_width" placeholder="Discount Amount" style="width:50%" />
+                <div style="display:none;color:red" id="err_dis_amount"></div>
+            </div>
+        </div>
+    <div class="cb">&nbsp;</div>
+    	<div style="background-color:#F4F4F4; float:left; width:100%">
+        <div style="float:left; width:20%;">Min Purchase<font color="red">*</font></div>
+            <div style="float:left;width:40%; text-align:left;"> 
+                <input type="text" name="min_pur" id="min_pur" class="venue_txt_bx_bg share_txt_width" placeholder="Minimum Purchase" style="width:50%"/>
+                <div style="display:none;color:red" id="err_mp"></div>
+            </div>
+        </div>
+    <div class="cb">&nbsp;</div>
+    <div style="background-color:#F4F4F4; float:left; width:100%">
+    	<div style="float:left; width:20%;">Choose Category</div>
+        <div style="float:left;width:70%;text-align:left;">
+            <select name="s_cat" id="s_cat" class="venue_txt_bx_bg share_txt_width" style="width:40%; min-height:100px" multiple>
+                <option value="ALL" selected>--ALL--</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Books">Books</option>
+                <option value="Shoes">Shoes</option>
+                <option value="Storage">Storage</option>
+                <option value="Computer">Computer</option>
+            </select>
+         </div>
+    </div>
+     <div class="cb">&nbsp;</div>
+     <div style="text-align:right">
+    <span>
+    	<input type="button" value="Submit" class="rc-button rc-button-submit allbuttonlink" name="save_offer" id="save_offer">
+    </span>
+   <span>
+     	<input type="button" value="Cancel" class="rc-button rc-button-submit allbuttonlink" name="cancel" id="cancel" onClick="JavaScript: history.go(-1);" style="cursor:hand" >
+    </span>
+    </div>
+    <div class="cb">&nbsp;</div>
+</div>
+</form>
+<div ng-include="'includes/footer.html'"></div>
+</body>
+</html>

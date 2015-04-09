@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="demoApp">
+<head>
+<meta charset=utf-8 />
+<meta name="viewport" content="width=620" />
+<title>HTML5 admin panel</title>
+<link rel="shortcut icon" href="img/favicon.png">
+<link href="css/admin.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery-1.10.1.js"></script>
+<script type="text/javascript" src="js/jquery.validate.js"></script> 
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/myapp.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript">
+if(localStorage.getItem("login") === 'true') {
+window.location.href = 'dashboard.html';
+}
+</script>
+</head>
+<body ng-app="">
+<div id="container">
+<div ng-include src="'includes/header.html'"></div>
+<div class="log_req">
+<div  style="height:30px;">Completely HTML5 site. Please run only in Chrome/Safari/Opera browser.</div>
+
+<div>UserId: uidg Password: uidg</div>			
+</div> 
+<!-- login form start -->      
+<div class="login_bg">
+      <div class="logingbox_headtitle">welcome</div>
+      <div style="float:left;width:40%" class="contct_details">
+          <span class="logingbox_boldtxt">Phone    : </span><span class="logingbox_normaltxt">156-815-680-680</span><br /> 
+          <span class="logingbox_boldtxt">Contact  :</span> <span class="logingbox_normaltxt">sales@uidg.com</span>
+      </div>
+  <div style="clear:both">&nbsp;</div>
+   <div style="background-color:#87bbf0;height:3px;">&nbsp </div>
+  <div style="clear:both">&nbsp;</div>
+  <form name="signin_form" id="signin_form">
+      <div style=" margin:15px">
+      <div>
+          <div class="login_id">UserId</div>                       
+          <div class="login_name"><input type="text" name="uname" id="uname" class="logingbox_input"/></div>
+      </div>
+      <div class="cb">&nbsp;</div>
+      <div>
+          <div class="login_id">Password</div>
+          <div  class="login_name"><input type="password" name="password" id="password" class="logingbox_input"/></div>
+      </div>
+      <div style="clear:both">&nbsp;</div>
+      <div>
+          <div class="div_submit">
+          <!--<input type="button" value="" name="btn_login" id="btn_login" class="frm_login" />-->
+          <input type="button" value="Login" class="rc-button allbuttonlink" name="btn_login" id="btn_login">
+          </div>
+      </div>
+  </div>      
+  </form> 
+</div>
+<!-- login form end -->       
+<div ng-include="'includes/footer.html'"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="demoApp">
+<head>
+<meta charset=utf-8 />
+<meta name="viewport" content="width=620" />
+<title>Add User</title>
+<link rel="shortcut icon" href="img/favicon.png">
+<link rel="stylesheet" href="css/admin.css" />
+<link  rel="stylesheet" type="text/css" href="css/uploadfile.css" />
+<link href="css/stylefront.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="js/jquery-1.10.1.js"></script>
+<script type="text/javascript" src="js/dropdown-menu.min.js"></script>
+<script type="text/javascript" src="js/jquery.uploadfile.min.js"></script>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/myapp.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/add_user.js"></script>
+</head>
+<body ng-app="">
+<div ng-include="'includes/header.html'"></div>
+<div style="margin:5px;padding:5px;text-align:left;width:30%;"><a href="dashboard.html">Home</a> &gt; Add New User</div>
+ <div class="cb">&nbsp;</div>
+<form name="add_brand_form" id="add_brand_form" method="post">
+<div style="border: solid 1px #286382; width:50%;margin:auto; padding:10px;">
+	<div class="error" style="text-align:right;"><font color="red">*</font> denotes mandatory fields.</div>
+    <div class="cb">&nbsp;</div>
+	<div style="background-color:#F4F4F4; float:left; width:100%">
+        <div style="float:left; width:20%;">Full Name<font color="red">*</font></div>
+            <div style="float:left;width:40%; text-align:left;"> 
+                <input type="text" name="full_name" id="full_name" class="venue_txt_bx_bg share_txt_width" placeholder="Full Name" />
+                <div style="display:none;color:red" id="err_fname"></div>
+            </div>
+            
+        </div>
+     <div class="cb">&nbsp;</div>
+     <div style="background-color:#F4F4F4; float:left; width:100%">
+        <div style="float:left; width:20%;">UserID<font color="red">*</font></div>
+            <div style="float:left;width:40%; text-align:left;"> 
+                <input type="text" name="user_id" id="user_id" class="venue_txt_bx_bg share_txt_width" placeholder="User ID" />
+                <div style="display:none;color:red" id="err_id"></div>
+            </div>
+        </div>
+      <div class="cb">&nbsp;</div>
+      <div style="background-color:#F4F4F4; float:left; width:100%">
+        <div style="float:left; width:20%;">Password<font color="red">*</font></div>
+            <div style="float:left;width:40%; text-align:left;"> 
+                <input type="password" name="upass" id="upass" class="venue_txt_bx_bg share_txt_width" placeholder="Password" />
+                <div style="display:none;color:red" id="err_upass"></div>
+            </div>
+        </div>
+       <div class="cb">&nbsp;</div>
+      <div style="background-color:#F4F4F4; float:left; width:100%">
+        <div style="float:left; width:20%;">Confirm Password<font color="red">*</font></div>
+            <div style="float:left;width:40%; text-align:left;"> 
+                <input type="password" name="c_upass" id="c_upass" class="venue_txt_bx_bg share_txt_width" placeholder="Confirm Password" />
+                <div style="display:none;color:red" id="err_c_upass"></div>
+            </div>
+        </div>
+         <div class="cb">&nbsp;</div>
+    <div style="background-color:#F4F4F4; float:left; width:100%">
+    	<div style="float:left; width:20%;">User Image</div>
+        <div style="float:left;solid;width:70%">
+            <input type="hidden" name="totfiles" id="totfiles" readonly value="0">
+            <input type="hidden" name="pageurl" id="pageurl" value="" size="0" />
+            <div id="mulitplefileuploader">Upload</div>
+            <div id="status"></div>
+            <div id="ids"></div>
+        </div>
+    </div>
+     <div class="cb">&nbsp;</div>
+    <div style="background-color:#F4F4F4; float:left; width:100%">
+    	<div style="float:left; width:20%;">User Type</div>
+        <div style="float:left;width:70%;text-align:left;"><select name="user_type" id="user_type" class="venue_txt_bx_bg share_txt_width" style="width:30%"><option value="0">--Select--</option><option value="Super Admin">Super Admin</option><option value="Admin">Admin</option><option value="General">General</option></select> </div>
+         <div style="display:none;color:red" id="err_utype"></div>
+    </div>
+     <div class="cb">&nbsp;</div>
+     <div style="text-align:right">
+   <span>
+    	<input type="button" value="Submit" class="rc-button rc-button-submit allbuttonlink" name="save_user" id="save_user">
+    </span>
+     <span>
+     	<input type="button" value="Cancel" class="rc-button rc-button-submit allbuttonlink" name="cancel" id="cancel" onClick="JavaScript: history.go(-1);" style="cursor:hand" >
+    </span>
+    </div>
+    <div class="cb">&nbsp;</div>
+</div>
+</form>
+<div ng-include="'includes/footer.html'"></div>
+</body>
+</html>

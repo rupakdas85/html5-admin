@@ -1,0 +1,879 @@
+/* Re-defined HTML Tags */
+body 
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000;
+}
+/* IE adds space after form tag, so make margin 0*/
+form
+{
+	margin:0px;
+}
+p, td 
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	/*color: #000;*/
+}
+a
+{
+	color: #006699;
+}
+a:HOVER
+{
+	color: #0099CC;
+}
+h1
+{
+	color:	#003366;
+	font-weight: bold;
+	font-size: 16px;
+}
+h2
+{
+	color:	#003366;
+	font-weight: bold;
+	font-size: 14px;	
+}
+hr
+{
+	color: #C5CDD3;
+}
+
+/* Custom Text Formats */
+.subTitle1
+{
+	color:	#003366;
+	font-weight: bold;
+	font-size: 14px;
+}
+.subTitle1Red
+{
+	color: #FF0000;
+	font-weight: bold;
+	font-size: 14px;
+}
+.subTitle2
+{
+	color:	#003366;
+	font-weight: bold;
+}
+.subTitleRed
+{
+	color: #FF0000;
+	font-weight: bold;
+}
+.subTitle2Red
+{
+	color: #FF0000;
+	font-weight: bold;
+}
+.subTitle2White
+{
+	color: #FFFFFF;
+	font-size: 14px;
+	font-weight: bold;
+}
+.subTitleWhite
+{
+	color: #FFFFFF;
+	font-weight: bold;
+}
+.label 
+{
+	color: #003366;
+	font-weight: normal;
+}
+.label-mandatory 
+{
+	font-size: 12px;
+	font-weight: bold;
+	color: #003366;
+}
+.fixed 
+{
+	
+	font-weight: normal;
+	color: #003366;
+}
+.fixed-label 
+{
+	
+	font-weight: bold;
+	color: #003366;
+}
+.redEmphasis
+{
+	color: #FF0000;
+	font-weight: bold;
+}
+.greenEmphasis
+{
+	color: #378E8E;
+	font-weight: bold;
+}
+.smallText
+{
+	font-size:10px;
+}
+.form-errors 
+{
+	color: #FF0000;
+}
+.post-errors 
+{
+	color: #FF0000;
+}
+.transaction-result 
+{
+	color: #FF0000;
+	font-size: 80%;
+}
+.transaction-errors 
+{
+	color: #FF0000;
+}
+.date
+{
+	font-size: 10px;
+	font-weight: bold;
+}
+
+.footerText
+{
+	font-size: 10px;
+	color: #333;
+}
+
+.blueUl
+{
+	list-style-image: url(images/ul_bluebullet.gif);
+	list-style-type: circle;
+}
+.blueUlInner
+{
+	list-style-image: url(images/ul_bluebulletinner.gif);
+	list-style-type: circle;
+}
+/* From gtld/css/styles.css */
+.header 
+{
+	font-weight: bold;
+	font-size: 14px;
+	color: #000000;
+}
+.whiteheader 
+{
+	font-weight: bold;
+	font-size: 14px;
+	color: #ffffff;
+}
+.main 
+{
+	font-size: 12px;
+	color: #000000;
+	font-family: Verdana, Arial;
+}
+.cattitle 
+{
+	font-weight: bold;
+	font-size: 12px;
+	color: #ffffff;
+	letter-spacing: 1px;
+}
+.red 
+{
+	color: #FF0000;
+}
+.copyright 
+{
+	font-size: 10px;
+	color: #444444;
+	letter-spacing: -1px;
+}
+
+/* Custom Link Formats */
+.titleNav
+{
+	font-size: 10px;
+	color:	#003366;
+	text-decoration: none;
+	font-weight: bold;
+}
+.titleNav:HOVER
+{
+	color: #FF0000;
+}
+.sideNav
+{
+	font-size: 10px;
+	font-weight: bold;
+	text-decoration: none;
+}
+.sideNav:HOVER
+{
+	font-size: 10px;
+	font-weight: bold;
+	text-decoration: none;
+}
+.sideNavSub 
+{
+	font-size: 10px;
+	color: #0099CC;
+	text-decoration: none;
+	font-weight: bold;	
+}
+.sideNavSub:HOVER 
+{
+	text-decoration: underline;
+}
+
+.footer
+{
+	font-size: 10px;
+	font-weight: bold;
+	text-decoration: none;
+	color:	#666666;
+}
+.linktextbig { font-size: 14px; font-weight: bold; text-decoration: none }
+.linktextbig:hover { text-decoration: underline }
+
+/* Custom Table Formats */
+.brenewerror
+{
+	background: #FF4040;
+}
+.brenewredemption
+{
+	background: #B7F0FF;
+}
+.brenew90
+{
+	background: #D2FFD2;
+}
+.brenewsus
+{
+	background: #FFC6C6;
+}
+.brenew30
+{
+	background: #FFCC66;
+}
+.brenew60
+{
+	background: #FFEC9D;
+}
+/*.stepLable
+{
+	background: #006699;
+	font-weight: bold;
+	color: #FFFFFF;
+	font-size: 14px;
+	padding: 5px;
+}*/
+.stepDescription
+{
+	background: #EAEEEE;
+	font-weight: bold;
+	font-size: 14px;
+	padding: 5px;
+}
+.stepResult
+{
+	background: #EAEEEE;
+	font-weight: bold;
+	padding: 5px;
+}
+.greyLight
+{
+	background:#EAEEEE;
+}
+.greyOutline
+{
+	background:#EAEEEE;
+	border: 1px solid #A7B4BC;
+}
+.greyDark
+{
+	background: #D3DADE; /* #C5CDD3;*/
+}
+.greyDarkUnderline
+{
+	background: #C5CDD3; 
+	border-bottom: 1px solid #333333;
+	border-top: 1px solid #333333;
+}
+.greyDarkOutline
+{
+	background: #C5CDD3;
+	border: 1px solid #C5CDD3;
+}
+.greyDarker
+{
+	background: #CBD2D8 ;/* #A0AEB8; */
+}
+.blueLight
+{
+	background: #B7F0FF;
+}
+.blueMed
+{
+	background: #0099CC;
+}
+.blueDark
+{
+	background: #00CCFF;
+}
+.blueGrey
+{
+	background: #D3EFF6;
+}
+.greenDark
+{
+	/*background: #00FF00;*/
+	background: #46FF46;
+}
+.greenLight
+{
+	background: #D2FFD2;
+}
+.greenGrey
+{
+	background: #E0F6E0;
+}
+.redDark
+{
+	background: #FF4040;
+}
+.redLight
+{
+	background: #FFC6C6;
+}
+.orangeLight
+{
+	background: #FFCC66;
+}
+.yellowLight
+{
+	background: #FFEC9D;
+}
+.yellowDark
+{
+	background: #FFCC00;
+}
+.yellowGrey
+{
+	background: #F6EDC6;
+}
+td.row1 
+{
+	background-color: #FFFFFF;
+}
+td.row2 
+{
+	background-color: #EAEEEE;
+}
+.tdDarkBlue
+{
+	background: #00CCFF;
+}
+.tdLightBlue
+{
+	background: #D3EFF6;
+}
+.sideNavGrey {
+	font-size: 10px;
+	color: #999999;
+	font-weight: bold;
+}
+.sideNavWhite {
+	font-size: 10px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+a.rsInc:LINK
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #A9B1B5;
+}
+a.rsInc:VISITED
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #A9B1B5;
+}
+a.rsInc:HOVER
+{
+	font-size: 10px;
+	font-weight: bold;
+	text-decoration: underline;
+	color: #A9B1B5;
+}
+a.rsCurr:LINK
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #CC0000;
+}
+a.rsCurr:VISITED
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #CC0000;
+}
+a.rsCurr:HOVER
+{
+	font-size: 10px;
+	font-weight: bold;
+	text-decoration: underline;
+	color: #CC0000;
+}
+a.rsDone:LINK
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #A9B1B5;
+}
+a.rsDone:VISITED
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+
+	text-decoration: none;
+	color: #A9B1B5;
+}
+a.rsDone:HOVER
+{
+	font-size: 10px;
+	font-weight: bold;
+	text-decoration: underline;
+	color: #A9B1B5;
+}
+/* Styles for mouseover info boxes */
+#infobox
+{
+	position: absolute;
+	left: -300px;
+	width: 350px;
+	border: 1px solid black;
+	padding-left: 2px;
+	background-color: #FFC;
+	font-size: 10px;
+	color: Black;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	visibility: hidden;
+	z-index: 100;
+	/*Remove below line to remove shadow. Below line should always appear last within this CSS
+	filter: progid:DXImageTransform.Microsoft.Shadow(color=gray,direction=135);*/
+}
+#infopointer
+{
+	position:absolute;
+	top: -300px;
+	left: -300px;
+	z-index: 101;
+	visibility: hidden;
+}
+/* FAQ classes */
+.faqr{margin-left: 5px; font-size: 10px;}
+.faqt{color: #003366;font-size: 14px;margin-left: 5px;; font-weight: bold}
+.faqq{color: #006699;font-size: 13px;margin-left: 5px;; font-weight: bold}
+.faqa{color: #333333;margin-left: 5px;; text-align: justify}
+.faqt2 { color: #FF0000;font-size: 14px;margin-left: 5px;; font-weight: bold ; text-decoration: underline}
+.faqq:hover {  color: #003366}
+.faqq2 { color: #008080;font-size: 13px;margin-left: 5px;; font-weight: bold}
+
+/* New classes */
+.note
+{
+	
+	font-size:12px;
+}
+
+.impNote
+{
+	color:#FF0000;
+	font-size: 12px;
+	font-weight: bold;
+}
+a.impNote:LINK
+{
+	color:#FF0000;
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: none;
+}
+a.impNote:VISITED
+{
+	color:#FF0000;
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: none;
+}
+a.impNote:HOVER
+{
+	color:#FF0000;
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: none;
+}
+.titlerow
+{
+	background: #A0AEB8;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 5px;
+	color:#FFFFFF;
+}
+.selDom
+{
+	color: #CC0000;
+}
+.selTrant
+{
+	color: #CC0000;
+}
+/* .infoText renamed to .labelInfo */
+.labelInfo
+{
+	font-size:10px;
+}
+.hosting_price
+{
+	color:	#003366;
+	font-weight: bold;
+	font-size: 14px;
+}
+.bgBusiness
+{
+	background: #FFCC00;
+}
+.bgPro
+{
+	background: #46FF46;
+}
+.bgLite
+{
+	background: #0099CC;
+}
+.tableheading
+{
+	background: #0099CC;
+	color: #FFFFFF;
+	font-weight: bold;
+}
+.strategyBg1
+{
+	background: #46FF46;
+}
+.strategyBg2
+{
+	background: #00CCFF;
+}
+.strategyBg3
+{
+	background: #FF4040;
+}
+.strategyBg4
+{
+	background: #FFCC00;
+}
+.message
+{
+	color: #009900;
+}
+.header_link
+{
+	text-decoration : none;
+}
+
+/* My domains style*/
+
+	/* My domains */
+		.tabmenu{
+				height:33px
+			}
+			.tabmenu ul{
+				list-style:none;
+				margin:0px;
+				padding:0px;
+			}
+			
+			.tabmenu li {
+				float: left;
+				margin: 0 1px 0 0;
+				padding-right: 2px;
+				position:relative;
+			}
+			.tabmenu li.selected{
+				z-index:10;
+				bottom:-1px;
+			}
+			
+			.tabmenu li a {
+				background: url(images/tabbg.gif) no-repeat 0 0; 
+				display: block;
+				padding-left: 10px;
+				text-decoration: none;
+				
+			}
+			
+			.tabmenu li span {
+				background: url(images/tabbg.gif) 100% 0;
+				display: block;
+				padding-right: 10px;
+				
+				font-weight:bold;
+				line-height:33px;
+			}
+			
+			.tabmenu li a:hover {
+				/*background-color: #A9B1B5;*/
+				background-position: 0 -50px;
+			}
+		
+			.tabmenu li a:hover span {
+				background-position: 100% -50px;
+			}
+			.tabmenu li.selected a {
+				/*background-color: #A9B1B5;*/
+				background-position: 0 -50px;
+			}
+			
+			.tabmenu li.selected span {
+				background-position: 100% -50px;
+			}
+			
+			#mydomains .searchfrm{
+				text-align:right;		
+			}
+			
+			.header{
+				background-color: #EAEEEE;
+			}
+			
+			#mydomains .registrant{
+				width:100px;
+				overflow:hidden;
+			}
+		/*My domains end */	
+
+
+	/* now managing menu*/
+
+	
+	.nowmanaging{
+		margin-top: 50px;
+		margin-bottom: 50px;
+		width:100%;
+	}
+	
+	.nowmanaging .domain{
+		white-space: nowrap;
+		float:left;
+		clear:both;
+		font-size: 18px;
+		font-weight: bold;
+		color: #CC0000;
+	}
+	.nowmanaging .managemenu {
+		 text-align: right;
+		 border-bottom:solid 1px #DDE0E6; 
+		 width:100%;
+	}
+	
+	.nowmanaging .domain a{
+		display:block;
+		padding-left: 10px;
+		background: url(images/tabbg.jpg) 0 0;
+	}
+	
+	.nowmanaging .domain span{
+		display:block;
+		padding-right: 10px;
+		padding-top: 10px;
+		padding-bottom:10px;
+		background: url(images/tabbg.jpg) 100% 0;
+		color: #CC0000;
+	}
+		
+		
+	/* now managing menu end */
+		
+	
+	#mydomains .dnslist{
+		display:block;
+		height: 16px;
+		overflow: hidden;
+	}	 
+	#mydomains .dnslist_expand{
+		display:block;
+		height: 100%;
+	}	 
+	#mydomains .paginationbar{
+		position: relative;
+		text-align: right;
+		margin-top:5px;
+		margin-bottom:5px;
+	}
+	
+	#mydomains .paginationbar .actionlist{
+		float:left;
+	}
+	
+	.manage_links h3{
+		font-size: 14px;
+		font-weight: bold;
+	}
+	
+	.manage_links ul{
+		list-style:none;
+		margin-left:0;
+		padding-left:0;
+	}
+	.manage_links ul li{
+		font-size: 12px;
+		
+		margin-top: 15px;
+	}
+	
+	#domainlist .hdomain_name{
+		min-width:325px; 
+	}
+	#domainlist .hexp{
+		width:120px;
+	}
+	
+	#domainlist .hchkbox{
+		width:20px;
+	}
+	
+	#domainlist a.domainname{
+		
+		background: url(images/bgselect.gif) no-repeat 100% 100%;
+		padding-right:40px;
+		font-weight: bold;
+	}
+	
+	/*#domainlist*/
+	.grid{
+		background-color: #FFFFFF; 
+		border:solid 1px #0099cc;
+	}
+	
+	#domainlist .grid  td{
+		padding-top:7px;
+		padding-bottom:7px;
+		
+	}
+	
+	#domainlist .grid tr:hover td{
+		background: #FFFF99 /*#DBE6E6;*/
+	}
+	
+/*content box used on manage domani page*/
+	.contentbox{
+		border: solid 1px #DDE0E6;
+		background: url(images/contentbg.jpg) repeat-x -5px top;
+		margin-bottom: 25px;
+		width:100%;
+		
+	}
+	.contentbox .subject{
+		width: 250px;
+		vertical-align: top;
+		padding-top: 15px ;
+		padding-left: 15px ;
+		border-right: solid 1px #DDE0E6;
+	}
+	.contentbox .subject h3{
+		font-size: 14px;
+		font-weight:bold;
+	}
+	.contentbox .info{
+		padding-top: 15px ;
+		padding-left: 15px ;
+		vertical-align:top;
+	}
+	.contentbox .info ul{
+		list-style-image: url(images/ul_bulletaro.gif);
+		list-style-position: inside;
+		margin-left:0px;
+		padding-left:0;
+	}
+	
+	.contentbox .info ul li{
+		margin-bottom: 15px;
+		margin-left:0px;
+		vertical-align: top;
+	}
+
+	.contentbox .grid_info td{
+		padding-bottom:10px;
+		padding-right: 40px;
+		white-space: nowrap;
+	}
+	.contentbox .grid_info .label{
+		font-weight: bold;
+		
+	}
+	.contentbox .grid_info a{
+		text-align:right;
+		display: block;
+		width: 50px;
+		
+	}
+	
+/*End  My domains style*/
+
+.gridtab{
+	background: url(images/tabbg.gif) no-repeat;
+	background-position:left -50px;
+	padding-left:20px;
+	position:relative;
+	bottom:-1px;
+	font-weight:bold;
+	color:#006699;
+
+}
+
+.gridtab span{
+	background: url(images/tabbg.gif) no-repeat;
+	background-position:right -50px;
+	padding-right:20px;
+	display:block;
+	line-height: 35px;
+	
+}
+.account_form label
+{
+        float: left;
+        width: 160px;
+        text-align: right;
+}
+.account_form .input, .account_form .frmbtn, .account_form .form-errors
+{
+        margin-left: 180px;
+}
+.account_form .frmfield
+{
+        padding: 5px 0;
+}
+.account_form em
+{
+        color: #F00;
+}
+

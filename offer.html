@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="demoApp">
+<head>
+<meta charset=utf-8 />
+<meta name="viewport" content="width=620" />
+<title>Manage Offer</title>
+<link rel="shortcut icon" href="img/favicon.png">
+<link rel="stylesheet" href="css/admin.css" />
+<link rel="stylesheet" href="css/popup.css">
+<link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css"/>
+<link href="css/stylefront.css" rel="stylesheet" type="text/css">
+<link href="css/popup_align.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="js/jquery-1.10.1.js"></script>
+<script type="text/javascript" src="js/dropdown-menu.min.js"></script>
+<script type="text/javascript" src="js/jquery.dataTables.min.js"></script> 
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/myapp.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/offer.js"></script>
+</head>
+<body ng-app="">
+	<div ng-include="'includes/header.html'"></div>
+	<div style="margin:5px;">
+	<div style="padding:5px;width:20%;text-align:left;float:left;"><a href="dashboard.html">Home</a> &gt;  Manage Brand</div>
+	<div style="padding:5px;width:50%;float:left;" id="no_offer_msg">&nbsp;</div>
+    <div style="padding:5px;width:20%;text-align:right;float:left;">
+    <input type="button" style="padding:3px 5px;border-radius:3px; background:#73d4f7; border:2px solid #73d4f7; color:#fff;cursor:pointer; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold;text-transform:uppercase;" value="+ Add Offer" id="add_new_offer" />
+    </div>
+</div>
+	<div class="cb">&nbsp;</div>
+    <div id="container" style="margin:20px;">
+        <table cellpadding="0" cellspacing="0" border="0" class="display" id="all_offer" width="100%"></table>
+    </div>	
+</div>
+<div ng-include="'includes/footer.html'"></div>
+</body>
+</html>

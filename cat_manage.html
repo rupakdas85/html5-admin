@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="demoApp">
+<head>
+<meta charset=utf-8 />
+<meta name="viewport" content="width=620" />
+<title>Admin Manage category</title>
+<link rel="shortcut icon" href="img/favicon.png">
+<link rel="stylesheet" href="css/admin.css" />
+<link rel="stylesheet" href="css/popup.css">
+<link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css"/>
+<link  rel="stylesheet" type="text/css" href="css/uploadfile.css" />
+<link href="css/stylefront.css" rel="stylesheet" type="text/css">
+<link href="css/popup_align.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="js/jquery-1.10.1.js"></script>
+<script type="text/javascript" src="js/dropdown-menu.min.js"></script>
+<script type="text/javascript" src="js/jquery.dataTables.min.js"></script> 
+<script type="text/javascript" src="js/jquery.uploadfile.min.js"></script>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/myapp.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/cat_manage.js"></script>
+</head>
+<body ng-app="">
+<div ng-include="'includes/header.html'"></div>
+<div style="margin:5px;">
+<div style="padding:5px;width:20%;text-align:left;float:left;"><a href="dashboard.html">Home</a> &gt; Manage Category</div>
+<div style="padding:5px;width:50%;float:left;" id="no_cat_msg">&nbsp;</div>
+<div style="padding:5px;width:20%;text-align:right;float:left;">
+<input type="button" style="padding:2px 5px;border-radius:2px; background:#73d4f7; border:2px solid #73d4f7; color:#fff;cursor:pointer; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold;text-transform:uppercase;" value="+ Add Category" id="add_category_new" />
+</div>
+</div>
+<div class="cb">&nbsp;</div>
+<div id="container" style="margin:20px;">
+    <table cellpadding="0" cellspacing="0" border="0" class="display responsive no-wrap" id="all_cat" width="100%"></table>
+</div>
+<div class="cat_add_popup" id="add_cat_popup" style="display: none;">
+	<div style="font-size:12px;">
+		<div class="rndbrder">
+            <div align="right" id="pop_close" style="position:absolute; top:-7px; right:-7px; cursor:pointer; z-index:9999" class="exit close_screen">
+            	<img src="img/close_screen.png">
+            </div>	           
+			<form name="add_category_form" id="add_category_form" accept-charset="utf-8" method="post">
+				<table width="100%" cellpadding="10" align="center">
+                    <caption>
+                        <span class="cat_heading"><u>Add New Category</u></span><br>			 	
+                    </caption>
+                    <tbody>
+                    <tr>
+                    <td colspan="2">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td width="33%">Name:</td>
+                            <td width="50%">
+                            <div>
+								<input type="text" name="CategoryCatName" id="CategoryCatName" placeholder="Category Name" class="venue_txt_bx_bg share_txt_width">
+                                <input type="hidden" id="to_edit" value="">
+							</div>
+                            <div style="display:none;color:#F00;text-align:center" id="err_catname"></div>
+                            </td>
+                            <td width="17%">&nbsp;</td>
+                        </tr>
+                        <tr>
+                        <td colspan="3">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td width="33%">Sub Category: </td>
+                            <td width="50%">
+							<select name="p_cat_id" id="p_cat_id" class="venue_txt_bx_bg share_txt_width"><option value="0">--Select--</option></select>
+                              <div style="display:none;color:#F00;text-align:center" id="err_subcatname"></div>
+                            </td>
+                            <td width="17%">&nbsp;</td>
+                        </tr>
+                    </table>
+                    </td>
+						</tr>						                                            
+                         <tr>
+                            <td valign="top" class="tdtext" width="33%">Image: </td>
+                            <td style="padding:10px;" width="67%">                                                                          
+                                <input type="hidden" name="totfiles" id="totfiles" readonly value="0">
+                                <input type="hidden" name="pageurl" id="pageurl" value="to be done" size="0" />
+                                <div id="mulitplefileuploader">Upload</div>
+                                <div id="status"></div>
+                                <div id="id_cat"></div>
+                            </td>
+                        </tr>
+                        <tr>
+							<td valign="top" class="tdtext">Description: </td>
+								<td>
+									<textarea name="cat_desc" id="cat_desc" class="venue_txt_bx_bg share_txt_width" style="height:72px;width:98%"></textarea>
+							</td>
+                            </tr>
+                        <tr>
+                            <td colspan="2" align="right">
+                            	<input type="button" value="Submit" class="rc-button rc-button-submit allbuttonlink" name="Submit" id="add_new_cat">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center" colspan="2">
+                            <div style="font-weight:bold;color:black;" class="cat_descriptions">NB: Fiels marked as * are mandatory field.</div>
+                            </td>
+                        </tr>
+                    </tbody>
+               </table>
+			</form>
+            </div>
+	</div>		
+</div>
+<div ng-include="'includes/footer.html'"></div>
+</body>
+</html>
